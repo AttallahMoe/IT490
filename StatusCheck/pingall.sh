@@ -1,7 +1,7 @@
 #!/bin/bash
 # Program name: pingall.sh
 date
-cat /path/to/list.txt |  while read output
+cat IP-list.txt |  while read output
 do
     ping -c 1 "$output" > /dev/null
     if [ $? -eq 0 ]; then
