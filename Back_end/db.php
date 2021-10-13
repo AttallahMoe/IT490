@@ -1,7 +1,7 @@
 <?php 
 include ("account.php");
 
-$db = mysqli_connect($hostname, $username, $password);
+$db = mysqli_connect($hostname, $username, $password, 'canvasdb');
 if (!$db)
 {
 die ('Could not connect:' . mysqli_connect_error());
