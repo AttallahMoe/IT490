@@ -1,20 +1,16 @@
 <?php 
+include ("account.php");
 
-$user = "XDiaz241"; 
-$password = "XDSandman2388"; 
-$host = "localhost"; 
-
-$connection= mysql_connect ($host, $user, $password);
-if (!$connection)
+$db = mysqli_connect($hostname, $username, $password);
+if (!$db)
 {
-die ('Could not connect:' . mysql_error());
+die ('Could not connect:' . mysqli_connect_error());
 }
+echo "Connected successfully";
 
+$showtables= mysqli_query("SHOW TABLES FROM canvasdb");
 
-
-$showtables= mysql_query("SHOW TABLES FROM database_name");
-
-while($table = mysql_fetch_array($showtables)) { 
+while($table = mysqli_fetch_array($showtables)) { 
     echo($table[0] . "<br>");    
 }
 ?>
