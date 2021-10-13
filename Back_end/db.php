@@ -1,8 +1,8 @@
 <?php 
 
-$user = "user"; 
+$user = "XDiaz241"; 
 $password = "XDSandman2388"; 
-$host = "host"; 
+$host = "localhost"; 
 
 $connection= mysql_connect ($host, $user, $password);
 if (!$connection)
