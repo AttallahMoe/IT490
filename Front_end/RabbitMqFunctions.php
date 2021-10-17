@@ -32,7 +32,7 @@ function register($user, $first, $last, $email, $pass){
 
     $response = $client->send_request($request); 
 
-    return $response
+    return $response;
 }
 
 ?>
