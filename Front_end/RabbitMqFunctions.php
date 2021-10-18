@@ -10,8 +10,8 @@ function login($user, $pass){
     $request = array();
 
     $request['type'] = "login";
-    $request['username'] = $user;
-    $request['password'] = $pass;
+    $request['Student_ID'] = $user;
+    $request['Student_Password'] = $pass;
 
     $response = $client->send_request($request);
 
@@ -27,8 +27,8 @@ function register($user, $first, $last, $email, $pass){
     $request['type'] = "register";
     $request['first'] = strtolower($first);
     $request['last'] = strtolower($last);
-    $request['email'] = $email;
-    $request['password'] = $pass;
+    $request['Student_ID'] = $email;
+    $request['Student_Password'] = $pass;
 
     $response = $client->send_request($request); 
 
