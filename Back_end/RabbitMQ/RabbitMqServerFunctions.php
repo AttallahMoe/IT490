@@ -66,10 +66,10 @@ function requestProcessor($request)
   switch ($request['type'])
   {
     case "login":
-      return doLogin($request['username'],$request['password']);
+      return doLogin($request['Student_ID'],$request['Student_Password']);
 
     case "register":
-        return doRegister($request['first'],$request['last'],$request['email'],$request['password'],$request['username']);
+        return doRegister($request['first'],$request['last'],$request['email'],$request['Student_Password'],$request['Student_ID']);
 
     case "validate_session":
       return doValidate($request['sessionId']);
