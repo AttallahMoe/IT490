@@ -77,7 +77,7 @@ function requestProcessor($request)
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
 
-$db = new mysqli("20.55.45.25", "XDiaz241", "canvasdb", "XDSandman2388");
+$db = mysqli_connect("20.55.45.25", "XDiaz241", "canvasdb", "XDSandman2388");
 
 if(!$db){
     die ('Could not connect:' . mysqli_connect_error());
