@@ -11,10 +11,10 @@ function doLogin($username,$password)
     global $db;
     $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
 
-    $query = "select exists(select password from student_table where username='$username');";
+    $query = "select Student_Password from canvasdb.Student_Table where Student_ID='$username';";
     $check = $db->query($query);
     $result = mysqli_fetch_array($check, MYSQLI_ASSOC);
-    $fResult = $result = $result['password'];
+    $fResult = $result['Student_Password'];
 
     if($check->num_rows == 0){
         echo "user does not exist ";
@@ -31,13 +31,13 @@ function doLogin($username,$password)
     }
 }
 
-function doRegister($username,$password, $first, $last, $email)
+function doRegister($first, $last, $webex_link, $password, $username, $class_standing, )
 {
     global $db;
     $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
 
-    $query = "select exists(select password from student_table where username='$username');";
-    $reg = "insert into student_table (username, password, first, last, email) values ('$username', '$password', '$first', '$last', '$email')";
+    $query = "select Student_Password from canvasdb.Student_Table where Student_ID='$username';";
+    $reg = "insert into canvasdb.Student_Table (Student_ID, Student_Password, Webex_Link, Class_Standing, first, last) values ('$username', '$password','$webex_link','$class_standing','$first','$last'); ";
 
     $check = $db->query($query);
 
@@ -69,7 +69,7 @@ function requestProcessor($request)
       return doLogin($request['Student_ID'],$request['Student_Password']);
 
     case "register":
-        return doRegister($request['first'],$request['last'],$request['email'],$request['Student_Password'],$request['Student_ID']);
+        return doRegister($request['first'],$request['last'],$request['Webex_Link'],$request['Student_Password'],$request['Student_ID'], $request['Class_Standing']);
 
     case "validate_session":
       return doValidate($request['sessionId']);
