@@ -21,11 +21,21 @@
            
         <form method="post" action="register.php">
           <input type="username" name="username" placeholder="Username: ">
+          <input type="text" name="first" placeholder="First Name: ">
+          <input type="text" name="last" placeholder="Last Name: ">
+          <input type="text" name="webex" placeholder="Webex Link: ">
+          <label>Class Standing</label>
+          <br>
+          <select name="standing">
+          <option value="freshmen">freshmen</option>
+          <option value="sophmore">sophmore</option>
+          <option value="junior">junior</option>
+          <option value="senior">senior</option>
+          <option value="professor">professor</option>
+          <br>
+      </select>
           <input type="password" name="password" placeholder="Password: ">
           <input type="confirm" name="confirm" placeholder="Confirm Password:">
-     <!-- <input type="firstname" name="firstname" placeholder="Firstname:">
-		      <input type="lastname" name="lastname" placeholder="Lastname:">
-          <input type="email" name="email" placeholder="E-mail:"> -->
           <input type="submit" value="Submit">
       </form>
 		

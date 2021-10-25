@@ -19,7 +19,7 @@ function login($user, $pass){
 
 }
 
-function register($user, $first, $last, $email, $pass){
+function register($user, $first, $last, $webex_link, $pass, $class_standing){
     $client = new rabbitMQClient("testRabbitMQ.ini", "testServer");
 
     $request = array();
@@ -29,6 +29,8 @@ function register($user, $first, $last, $email, $pass){
     $request['last'] = strtolower($last);
     $request['Student_ID'] = $email;
     $request['Student_Password'] = $pass;
+    $request['Class_Standing'] = $class_standing;
+    $request['Webex_Link'] = $webex_link;
 
     $response = $client->send_request($request); 
 
