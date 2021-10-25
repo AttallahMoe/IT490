@@ -31,7 +31,7 @@ function doLogin($username,$password)
     }
 }
 
-function doRegister($first, $last, $webex_link, $password, $username, $class_standing, )
+function doRegister($first, $last, $webex_link, $password, $username, $class_standing)
 {
     global $db;
     $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
