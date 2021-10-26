@@ -1,21 +1,20 @@
 <?php
 
 session_start();
-include('RabbitMqFunctions.php');
-
+require_once('RabbitMqFunctions.php');
 $username = strtolower($_POST['username']);
 $password = strtolower($_POST['password']);
 
 $response = login($username, $password);
 
-if($loginResponse == true){
-	$_SESSION['username'] = $username;
-	header("location:./home.php");
+if($response == true){
+        $_SESSION['username'] = $username;
+        header("location:./home.php");
 }
 
-else(){
+else{
     echo("incorrect username or password");
-	header("location:../login.php");
+        header("location:./login.html");
 }
 
 ?>
