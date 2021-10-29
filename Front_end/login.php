@@ -3,7 +3,7 @@
 session_start();
 require_once('RabbitMqFunctions.php');
 $username = strtolower($_POST['username']);
-$password = strtolower($_POST['password']);
+$password = $_POST['password'];
 
 $response = login($username, $password);
 
