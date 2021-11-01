@@ -9,7 +9,7 @@ $response = login($username, $password);
 
 if($response == true){
         $_SESSION['username'] = $username;
-        header("location:./home.php");
+        header("location:./home.html");
 }
 
 else{

@@ -14,7 +14,7 @@ $response = register($user, $first, $last, $webex_link, $pass, $class_standing);
 
 if($response == true){
         $_SESSION['username'] = $username;
-        header("location:./home.php");
+        header("location:./home.html");
 }
 
 else{
