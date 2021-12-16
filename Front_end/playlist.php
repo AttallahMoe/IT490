@@ -81,7 +81,13 @@ function ListPlaylists ($username,$db){
   $s= "select * from Playlist_Table where ";
   echo "<br>$s<br><br>";
   ($t= mysqli_query($db, $s)) or die(mysqli_error($db));
-  echo "<br> Playlist has succeeded!";
+
+  while ($r = mysqli_fetch_array($t, MYSQLI_ASSOC)){
+    $studentid = $r["STUDENT_ID"];
+    $videolink = $r["Video_Link"];
+    echo "<br> Student ID: $studentid || Video Link: $videolink <br>";
+  }
+  
 }
 
 ?>
