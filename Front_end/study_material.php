@@ -18,7 +18,7 @@ function add_playlist($link){
         <body>
        <div class="navbar">
         <a href="home.html" class="-button-bar-item">Home</a>
-        <a href="study_material.html" class="-button-bar-item">Study Material</a>
+        <a href="study_material.php" class="-button-bar-item">Study Material</a>
         <a href="logout.php">Logout<br></a>
 
        </div>
