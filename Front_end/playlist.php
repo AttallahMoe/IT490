@@ -76,7 +76,15 @@ body {
           <input type="submit" value="Submit">
       </form>
 </p>
+<?php
+function ListPlaylists ($username,$db){
+  $s= "select * from Playlist_Table where ";
+  echo "<br>$s<br><br>";
+  ($t= mysqli_query($db, $s)) or die(mysqli_error($db));
+  echo "<br> Playlist has succeeded!";
+}
 
+?>
 
 </div>
 
