@@ -11,7 +11,18 @@ global $db;
 function doLogin($username,$password)
 {
     global $db;
-    $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+
+    for ($x = 0; $x < 3; $x++) {
+        $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+        if ($flag == true){
+                break;}
+                $server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
+                if ($flag == true){
+                        break;}
+                        $server = new rabbitMQServer("testRabbitMQ.ini","testServer2");
+                        if ($flag == true){
+                                break;}
+}
 
     $query = "select exists(select password from student_table where username='$username');";
     $check = $db->query($query);
@@ -36,7 +47,17 @@ function doLogin($username,$password)
 function doRegister($username,$password, $first, $last, $email)
 {
     global $db;
-    $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+    for ($x = 0; $x < 3; $x++) {
+        $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+        if ($flag == true){
+                break;}
+                $server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
+                if ($flag == true){
+                        break;}
+                        $server = new rabbitMQServer("testRabbitMQ.ini","testServer2");
+                        if ($flag == true){
+                                break;}
+}
 
     $query = "select exists(select password from student_table where username='$username');";
     $reg = "insert into student_table (username, password, first, last, email) values ('$username', '$password', '$first', '$last', '$email')";

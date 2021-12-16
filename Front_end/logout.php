@@ -9,5 +9,5 @@ session_destroy();
 <?php require_once(__DIR__ . "/IT490/Front_end/RabbitMqFunctions.php"); ?>
 <?php
 flash("You have been logged out");
-die(header("Location: login.php"));
+die(header("Location: login.html"));
 ?>
