@@ -11,18 +11,7 @@ global $db;
 function doLogin($username,$password)
 {
     global $db;
-
-    for ($x = 0; $x < 3; $x++) {
-        $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
-        if ($flag == true){
-                break;}
-                $server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
-                if ($flag == true){
-                        break;}
-                        $server = new rabbitMQServer("testRabbitMQ.ini","testServer2");
-                        if ($flag == true){
-                                break;}
-}
+    $server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
 
     $query = "select exists(select password from student_table where username='$username');";
     $check = $db->query($query);
@@ -47,17 +36,7 @@ function doLogin($username,$password)
 function doRegister($username,$password, $first, $last, $email)
 {
     global $db;
-    for ($x = 0; $x < 3; $x++) {
-        $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
-        if ($flag == true){
-                break;}
-                $server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
-                if ($flag == true){
-                        break;}
-                        $server = new rabbitMQServer("testRabbitMQ.ini","testServer2");
-                        if ($flag == true){
-                                break;}
-}
+    $server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
 
     $query = "select exists(select password from student_table where username='$username');";
     $reg = "insert into student_table (username, password, first, last, email) values ('$username', '$password', '$first', '$last', '$email')";
@@ -100,18 +79,17 @@ function requestProcessor($request)
   return array("returnCode" => '0', 'message'=>"Server received request and processed");
 }
 
-$db = mysqli_connect("20.55.45.25", "XDiaz241", "canvasdb", "XDSandman2388");
+//$db = mysqli_connect("20.55.45.25", "XDiaz241", "canvasdb", "XDSandman2388");
 
-if(!$db)
-{
-    die ('Could not connect:' . mysqli_connect_error());
-}
-/*
-$server = new rabbitMQServer("testRabbitMQ.ini","testServer");
+//if(!$db)
+//{
+  //  die ('Could not connect:' . mysqli_connect_error());
+//}
 
+$server = new rabbitMQServer("testRabbitMQ.ini","testServer1");
 echo "testRabbitMQServer BEGIN".PHP_EOL;
 $server->process_requests('requestProcessor');
 echo "testRabbitMQServer END".PHP_EOL;
 exit();
-*/
+
 ?>

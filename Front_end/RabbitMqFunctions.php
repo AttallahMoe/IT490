@@ -27,12 +27,12 @@ function register($user, $first, $last, $webex_link, $pass, $class_standing){
     $request['type'] = "register";
     $request['first'] = strtolower($first);
     $request['last'] = strtolower($last);
-    $request['Student_ID'] = $email;
+    $request['Student_ID'] = $user;
     $request['Student_Password'] = $pass;
     $request['Class_Standing'] = $class_standing;
     $request['Webex_Link'] = $webex_link;
 
-    $response = $client->send_request($request); 
+    $response = $client->send_request($request);
 
     return $response;
 }
