@@ -12,15 +12,15 @@
         include "dbconnect.php";
         $db = new dbConnect();
         $conn = $db->connect();
-        
+
         $key = "AIzaSyCnavHwyyNTPInBXCN8z1igwA1Lh9nYVfg";
         $base_url = "https://www.googleapis.com/youtube/v3";
-        $channelId = "";
+        $channelId = "UCPq52HQ0_ISODpJfmkFINrg";
         $maxResult = 10;
         $video_type = isset($_GET['vtype']) ? 1 : 2;
 
         if($video_type == 1){
-            $API_URL = $base_url . "playlists?order=date&part=snippet&channelID=".$channelId. "&maxResult=".$maxResult.".&key=".$key;
+            $API_URL = $base_url . "search?order=date&part=snippet&channelID=".$channelId. "&maxResult=".$maxResult.".&key=".$key;
             getVideos($API_URL);
         } else {
             $API_URL = $base_url . "playlists?order=date&part=snippet&channelID=".$channelId. "&maxResult=".$maxResult.".&key=".$key;
