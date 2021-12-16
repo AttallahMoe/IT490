@@ -78,7 +78,12 @@ body {
 </p>
 <?php
 function ListPlaylists ($username,$db){
-  $s= "select * from Playlist_Table where ";
+  $db = mysqli_connect("20.55.45.25", "XDiaz241", "canvasdb", "XDSandman2388");
+
+  if(!$db){
+    die ('Could not connect:' . mysqli_connect_error());
+  }
+  $s= "select * from Playlist_Table where $";
   echo "<br>$s<br><br>";
   ($t= mysqli_query($db, $s)) or die(mysqli_error($db));
 
