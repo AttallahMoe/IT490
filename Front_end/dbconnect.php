@@ -1,9 +1,9 @@
 <?php
     class dbConnect {
-        private $host = 'localhost';
-        private $dbName = 'youtube';
-        private $user = "root";
-        private $pass = '';
+        private $host = '20.55.45.25';
+        private $dbName = 'canvasdb';
+        private $user = "XDiaz241";
+        private $pass = 'XDSandman2388';
 
         public function connect(){
             try{

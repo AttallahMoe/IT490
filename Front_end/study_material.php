@@ -10,9 +10,9 @@ if(!$db)
     die ('Could not connect:' . mysqli_connect_error());
 }
 
-function show_playlist()
+function display(url)
 {
-    
+    ``````
 
 }
 
@@ -26,4 +26,4 @@ else{
 
 ?>
 
-display(youtubeline)
+display(v=fdjfdk)
