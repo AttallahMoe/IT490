@@ -5,7 +5,7 @@ function ListPlaylists ($username,$db){
   if(!$db){
     die ('Could not connect:' . mysqli_connect_error());
   }
-  $s= "select * from Playlist_Table where Student_ID = '$username' ";
+  $s= "select * from canvasdb.Playlist_Table where Student_ID = '$username' ";
   echo "<br>$s<br><br>";
   ($t= mysqli_query($db, $s)) or die(mysqli_error($db));
 
