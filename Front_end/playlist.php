@@ -88,7 +88,7 @@ function ListPlaylists ($username,$db){
   ($t= mysqli_query($db, $s)) or die(mysqli_error($db));
 
   while ($r = mysqli_fetch_array($t, MYSQLI_ASSOC)){
-    $studentid = $r["STUDENT_ID"];
+    $username = $r["STUDENT_ID"];
     $videolink = $r["Video_Link"];
     echo "<br> Student ID: Your Playlist! <br>";
     <iframe width="420" height="345" src=$videolink></iframe><br>
