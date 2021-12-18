@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Youtube data API V3 integration in PHP and MySql</title>
+    <title> YT Index</title>
     <link> rel="stylesheet" href="../library/css/bootstrap.min.css">
 </head>
 <body>
