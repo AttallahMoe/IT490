@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="csshome.css">
-<title> Home </title>
+<title> Study Material </title>
 
 <style>
 body {
@@ -50,8 +49,10 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 </style>
 </head>
+
 <body style= "background-color: red;">
 
 <div id="mySidenav" class="sidenav">
@@ -61,17 +62,33 @@ body {
   <a href="playlist.html" class="playlist">Playlist</a>
   <a href="study_material.html" class="studymaterial">Study Material</a>
   <a href="logout.html" class="logout">Logout</a>
+  
 </div>
 
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-<div class="body" style= "text-align: center; margin: 10px; border: 10px;padding: 40px;border-style: double; background-color: grey; opacity: 0.85; font-weight: bold; background-image: url('AS6973.jpg')">
-<h2 style= "font-size: 40px; color: white;">Welcome, <?php echo $username; ?> to Social Study.com!</h2>
-<p style= "padding: 150px; font-size: 30px; color: black;">A brand new academic platform that is here to facilitate your academic experience!</p>
 
+<div class="body" style= "text-align: center; margin: 10px; border: 10px;padding: 10px;border-style: double; background-color: grey; opacity: 0.85; font-weight: bold; background-image: url('AS6973.jpg')">
+<h2 style= "font-size: 40px; color: white;">Check out some of these helpful learning guides!<?php echo $username; ?></h2>
+<p style= "padding: 150px; font-size: 30px; color: black;">
+        <script>
+        var phpadd= <?php echo add(1,2);?> 
+        </script> <!-- calls php add function -->
+
+       <iframe width="420" height="345" src="https://www.youtube.com/embed/TMubSggUOVE"></iframe>
+       <a href="add_playlist(https://www.youtube.com/embed/TMubSggUOVE)" 
+       <form action="addbtn">
+       <input type="button" value="Add to Playlist" /> </a><br></p>
+</form>
+
+      <iframe width="420" height="345" src="https://www.youtube.com/embed/TMubSggUOVE"></iframe>
+  <a href="add_playlist(https://www.youtube.com/embed/TMubSggUOVE)" 
+  <form action="addbtn">
+  <input type="button" value="Add to Playlist" /> </a><br></p>
+</form>
 
 </div>
-
+ 
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";

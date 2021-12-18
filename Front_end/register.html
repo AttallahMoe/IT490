@@ -7,6 +7,7 @@
 <title> Registration </title>
 
 <style>
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -56,37 +57,46 @@ body {
 <div id="mySidenav" class="sidenav">
 
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="home.html" class="homelink">Home</a>
-  <a href="register.html" class="registerlink">Register</a>
-  <a href="login.html" class="loginlink">Login</a>
-  <a href="study_material.html" class="studymaterial">Study Material</a>
+  <a href="register.html" class="register">Register</a>
+  <a href="login.html" class="login">Login</a>
 </div>
 
 <span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
 <div class="body" style= "text-align: center; margin: 10px; border: 10px;padding: 40px; height: 300px; border-style: double; background-color: grey; opacity: 0.85; font-weight: bold; background-image: url('AS6973.jpg')"> 
-<h2 style= "font-size: 40px; color: white;">Register Here!</h2>
+<h2 style= "font-size: 40px; color: white;">Register for an Account Here!</h2>
 <p style= "padding: 5px; font-size: 30px; color: black;">
 <div class="wrapper">
 
-        <form method="post" action="register.php">
-          <input type="username" name="username" placeholder="Username: ">
+        <form method="post" style= "text-align: center; font-weight: bold; " action="register.php">
           <input type="text" name="first" placeholder="First Name: ">
-          <input type="text" name="last" placeholder="Last Name: ">
-          <input type="text" name="webex" placeholder="Webex Link: ">
-          <label>Class Standing</label>
-          <br>
-          <select name="standing">
-          <option value="freshmen">freshmen</option>
-          <option value="sophmore">sophmore</option>
-          <option value="junior">junior</option>
-          <option value="senior">senior</option>
-          <option value="professor">professor</option>
-          </select>
-          <br>
+          <input type="text" name="last" placeholder="Last Name: "> <br> <br>
+          <input type="username" name="username" placeholder="Username: ">
+          <input type="text" name="webex" placeholder="Webex Link: "> <br> <br>
           <input type="password" name="password" placeholder="Password: ">
-          <input type="password" name="confirm" placeholder="Confirm Password:">
+          <input type="password" name="confirm" placeholder="Confirm Password:"> <br> <br>
+          
+     <div class="selectmenus" style="text-align: center;">
+          <select name="type"> <br>
+          <option value="typeofperson">Teacher or Student?</option> <br>
+          <option value="teacher">Teacher</option>
+          <option value="student">Student</option>
+          </select>
+                   
+          <select name="standing"> <br>
+          <option value="classstanding">Class Standing?</option> <br>
+          <option value="freshmen">Freshmen</option>
+          <option value="sophmore">Sophmore</option>
+          <option value="junior">Junior</option>
+          <option value="senior">Senior</option>
+          <option value="master">Master's</option>
+          <option value="doctor">Doctoral</option>
+          </select>
+     </div>
+          <br>
+    <div class="button">
           <input type="submit" value="Submit">
+     </div>
       </form>
 
 </div>
