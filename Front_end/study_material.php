@@ -126,8 +126,6 @@ function closeNav() {
 
        </div>
 
-
-
        <iframe width="420" height="345" src="https://www.youtube.com/embed/TMubSggUOVE"></iframe>
         <script>
         var phpadd= <?php echo add(1,2);?> //call the php add function
