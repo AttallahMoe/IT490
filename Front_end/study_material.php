@@ -7,16 +7,6 @@ function add_playlist($link){
     return $mydata;
 }
 ?>
-<!DOCTYPE html>
-<html lang="en"><?php
-// Call PHP function from javascript without ajax
-session_set_cookie_params(0, "~/RabbitMQ_connect/IT490/RabbitMQ/php_example/html/");
-session_start();
-function add_playlist($link){
-    $mydata='Call by function declaration PHP';
-    return $mydata;
-}
-?>
 
 <!DOCTYPE html>
 <html>
@@ -111,28 +101,3 @@ function closeNav() {
 
 </body>
 </html>
-<head>
-                <title> Study Material </title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-                <link rel="stylesheet" href="csshome.css">
-</head>
-
-        <body>
-       <div class="navbar">
-        <a href="home.html" class="-button-bar-item">Home</a>
-        <a href="study_material.php" class="-button-bar-item">Study Material</a>
-        <a href="logout.php">Logout<br></a>
-
-       </div>
-
-       <iframe width="420" height="345" src="https://www.youtube.com/embed/TMubSggUOVE"></iframe>
-        <script>
-        var phpadd= <?php echo add(1,2);?> //call the php add function
-        </script>
-
-       <iframe width="420" height="345" src="https://www.youtube.com/embed/TMubSggUOVE"></iframe>
-       <a href="add_playlist(https://www.youtube.com/embed/TMubSggUOVE)" class="-button-bar-item">add</a><br>
-       </body>
-
-        </html>
